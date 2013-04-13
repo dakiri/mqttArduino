@@ -11,12 +11,17 @@ mosquitto_pub -d -m '{"test":"0"}'  -t "inTopic"
 
 mosquitto_sub  -h 127.0.0.1  -t outTopic/# -v
 
-Results like :
+<b>Results like :</b>
 
 outTopic/pin 5 {state:0}
+
 outTopic/pin 6 {state:0}
+
 outTopic/pin 7 {state:0}
+
 outTopic/pin 5 {state:1}
+
 outTopic/pin 6 {state:1}
+
 outTopic/pin 7 {state:1}
 
