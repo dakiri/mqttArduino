@@ -1,7 +1,7 @@
 mqttArduino
 ===========
 
-A simple proof to test the Arduino mqtt library to publish digital pin state and control relay using I2C RELAY8 shield.
+A simple proof to test the Arduino mqtt library to publish digital pin state and control relay using I2C RELAY8 shield (tested on EtherTen from Freetronics).
 
 Subscribe to the topic inTopic and change output 7 of relay8 to up for 200ms.
 
@@ -12,7 +12,7 @@ mosquitto_pub -d -m '{"test":"0"}'  -t "inTopic"
 mosquitto_sub  -h 127.0.0.1  -t outTopic/# -v
 </pre>
 
-<b>Results like :</b>
+<b>Results:</b>
 
 <pre>
 outTopic/pin 5 {state:0}
