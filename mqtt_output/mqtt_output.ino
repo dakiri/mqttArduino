@@ -40,7 +40,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 void setup()
 {
   Serial.begin( 115200 );
-  Serial.println("RELAY8 demonstration starting up");
+  Serial.println("Starting up");
 
   Wire.begin(); // Wake up I2C bus
 
@@ -51,7 +51,7 @@ void setup()
   Wire.endTransmission();
   
   Ethernet.begin(mac, ip);
-  if (client.connect("arduinoClient23")) {
+  if (client.connect("arduinoClient")) {
     client.subscribe("inTopic");
   }
 
@@ -71,14 +71,11 @@ void loop()
 
       sprintf(topic,"outTopic/pin%2d",pinNumber);
       sprintf(message,"{state:%1d}",state);
-//      Serial.println("message");
       client.publish(topic,message);
     }
   }
-  
-  end = micros();
-  delta = end - start;
-  Serial.println(delta);
+
+
 }
 
 void sendValueToLatch(int latchValue)
