@@ -13,6 +13,7 @@ mosquitto_sub  -h 127.0.0.1  -t outTopic/# -v
 
 <b>Results like :</b>
 
+<pre>
 outTopic/pin 5 {state:0}
 
 outTopic/pin 6 {state:0}
@@ -24,4 +25,5 @@ outTopic/pin 5 {state:1}
 outTopic/pin 6 {state:1}
 
 outTopic/pin 7 {state:1}
+</pre>
 
